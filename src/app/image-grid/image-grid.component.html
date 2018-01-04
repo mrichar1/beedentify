@@ -1,6 +1,8 @@
-<div>
+<div class="container">
   <p>Click on one or more images to select them:</p>
-  <div class="item" *ngFor="let image of image_data; let id = index">
-      <app-image-select [id]="id" [image]="image.url" [(active)]="image.active"></app-image-select>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let image of image_data; let id = index">
+        <app-image-select [id]="id" [image]="image.url" [(active)]="image.active"></app-image-select>
+    </div>
   </div>
 </div>
