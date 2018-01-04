@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ImageGridComponent } from './image-grid/image-grid.component';
@@ -15,7 +15,7 @@ import { ImageDataService }  from './image-data.service';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpClientModule,
   ],
   providers: [ImageDataService],
   bootstrap: [AppComponent]

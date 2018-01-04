@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {Http} from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { ImageDataService } from "./image-data.service";
 
 @Component({
@@ -10,13 +10,13 @@ import { ImageDataService } from "./image-data.service";
 export class AppComponent {
 
   title = 'Beedentify';
-  image_data: object;
+  image_data: Object;
 
-  constructor(private http: Http, private imgDataSvc: ImageDataService) {}
+  constructor(private http: HttpClient, private imgDataSvc: ImageDataService) {}
 
   ngOnInit() {
     this.imgDataSvc.image_data.subscribe(res => this.image_data = res)
     this.http.get('assets/images.json')
-      .subscribe(res => this.imgDataSvc.changeData(res.json()));
+      .subscribe(data => this.imgDataSvc.changeData(data));
   }
 }
