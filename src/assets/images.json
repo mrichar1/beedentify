@@ -1,4 +1,24 @@
-[{
- "url":"https://dummyimage.com/400x300/900000/000", "active":false},
- {"url":"https://dummyimage.com/400x300/00ee00/000", "active":false}
+[
+{"active":false, "url": "assets/img/bumble-bee2.jpg"},
+{"active":false, "url": "assets/img/bumble-bee.jpg"},
+{"active":false, "url": "assets/img/bumble-bee-loft-insulation.jpg"},
+{"active":false, "url": "assets/img/bumble-bee-nest2.jpg"},
+{"active":false, "url": "assets/img/bumble-bee-nest.jpg"},
+{"active":false, "url": "assets/img/honey-bee2.jpg"},
+{"active":false, "url": "assets/img/honey-bee-brace-comb.jpg"},
+{"active":false, "url": "assets/img/honey-bee.jpg"},
+{"active":false, "url": "assets/img/hornet.jpg"},
+{"active":false, "url": "assets/img/mason-bee.jpg"},
+{"active":false, "url": "assets/img/mining-bee.jpg"},
+{"active":false, "url": "assets/img/nestbox2.jpg"},
+{"active":false, "url": "assets/img/nestbox.jpg"},
+{"active":false, "url": "assets/img/swarm2.jpg"},
+{"active":false, "url": "assets/img/swarm3.jpg"},
+{"active":false, "url": "assets/img/swarm.jpg"},
+{"active":false, "url": "assets/img/vents.jpg"},
+{"active":false, "url": "assets/img/walls.jpg"},
+{"active":false, "url": "assets/img/wasp2.jpg"},
+{"active":false, "url": "assets/img/wasp.jpg"},
+{"active":false, "url": "assets/img/wasp-nest2.jpg"},
+{"active":false, "url": "assets/img/wasp-nest.jpg"}
 ]
