@@ -1,0 +1,23 @@
+/* Disable checkbox indicator */
+input[type="checkbox"] {
+  display: none;
+}
+
+label img {
+  cursor: pointer;
+  border: 5px solid transparent;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: blue;
+  color: white;
+  /* tick-mark */
+  content: '\2713';
+  position: absolute;
+  margin: 5px;
+  font-size: 30px;
+}
+
+input[type="checkbox"]:checked + label img {
+ border: 5px solid #00f;
+}
