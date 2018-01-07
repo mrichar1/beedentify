@@ -1,0 +1,13 @@
+[type=checkbox] { display:none;}
+
+/* Space out buttons */
+label.btn {
+  margin: 10px;
+  /* opacity: 0.6; */
+}
+
+/* Give grid boxes a border and remove content padding */
+.gridbox {
+  border: 1px solid lightgray;
+  padding: 0px;
+}
