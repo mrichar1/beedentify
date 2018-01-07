@@ -9,7 +9,6 @@ export class ImageDataService {
   constructor() {}
 
   changeData(data: any) {
-    console.log(data)
     this.dataSource.next(data)
   }
 }
