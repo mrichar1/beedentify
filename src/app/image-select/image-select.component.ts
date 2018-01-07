@@ -6,20 +6,17 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./image-select.component.css']
 })
 export class ImageSelectComponent implements OnInit {
-  @Input() active: boolean;
   @Output() activeChange = new EventEmitter<boolean>();
-  @Input() image: string;
+  @Input() image_data: object;
   @Input() id: string;
 
-  constructor() {
-    this.active = false
-  }
+  constructor() {}
 
   ngOnInit() {}
 
   clicked() {
     // Toggle active state on click, and fire event
-    this.active = !this.active
-    this.activeChange.emit(this.active);
+    this.image_data['active'] = !this.image_data['active']
+    this.activeChange.emit(this.image_data['active']);
   }
 }

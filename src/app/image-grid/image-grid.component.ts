@@ -10,6 +10,8 @@ import { ImageDataService } from "../image-data.service";
 })
 export class ImageGridComponent implements OnInit {
   image_data: object;
+  filter_types = {"insects": true, "locations": true};
+  ft_keys = Object.keys(this.filter_types);
 
   constructor(private imgDataSvc: ImageDataService) {}
 
