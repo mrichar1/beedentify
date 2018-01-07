@@ -1,8 +1,12 @@
-<div class="container">
-  <p>Click on one or more images to select them:</p>
+<div class="container-fluid">
+  <div class="btn-group" data-toggle="buttons" *ngFor="let type of ft_keys">
+    <label class="btn-outline-primary" ngbButtonLabel>
+      <input type="checkbox" ngbButton [(ngModel)]="filter_types[type]"> {{type}}
+    </label>
+  </div>
   <div class="row">
-    <div class="col-sm-3" *ngFor="let image of image_data; let id = index">
-        <app-image-select [id]="id" [image]="image.url" [(active)]="image.active"></app-image-select>
-    </div>
+    <ng-container *ngFor="let image of image_data; let id = index">
+      <app-image-select *ngIf="filter_types[image.type]" class="col-sm-3 gridbox" [image_data]="image" [id]="id"></app-image-select>
+    </ng-container>
   </div>
 </div>
