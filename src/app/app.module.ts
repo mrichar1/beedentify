@@ -9,13 +9,15 @@ import { ImageGridComponent } from './image-grid/image-grid.component';
 import { ImageSelectComponent } from './image-select/image-select.component';
 import { ImageDataService }  from './image-data.service';
 import { BootstrapSwitchModule } from 'angular2-bootstrap-switch';
+import { ResultsComponent } from './results/results.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageGridComponent,
-    ImageSelectComponent
+    ImageSelectComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
