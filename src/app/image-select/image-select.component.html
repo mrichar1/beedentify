@@ -1,2 +1,7 @@
-<input type="checkbox" id={{id}}/>
-<label for="{{id}}" (click)="clicked()"><img class="img-fluid" src={{image.url}} /></label>
+<input type="checkbox" id={{id}} [checked]="image.active" />
+<label for="{{id}}" (click)="clicked()"[ngClass]="{'active': image.active}">
+  <div>
+    <img class="img-fluid" src={{image.url}} />
+    <div class="checkmark"><p>&#10003;</p></div>
+  </div>
+</label>
