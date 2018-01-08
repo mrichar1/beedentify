@@ -10,7 +10,7 @@ import { ImageDataService } from "./image-data.service";
 export class AppComponent {
 
   title = 'Beedentify';
-  image_data: Object;
+  image_data: Array<object>;
 
   constructor(private http: HttpClient, private imgDataSvc: ImageDataService) {}
 
