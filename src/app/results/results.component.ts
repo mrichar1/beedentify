@@ -7,10 +7,10 @@ import { ImageDataService } from "../image-data.service";
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  image_data: Array<object>;
-  result_html: string = "<p>Please select one or more images below which match what you are currently seeing.\n\
-        You can toggle zooming of images when you hover over them, and turn various categories of image on and off, depending on what you can see.\n\
-        When you select at least one image, this panel will update with your results.</p>"
+  default_html = "<p>Please select one or more images below which match what you are currently seeing.\n\
+  You can toggle zooming of images when you hover over them, and turn various categories of image on and off, depending on what you can see.\n\
+  When you select at least one image, this panel will update with your results.</p>"
+  result_html: string = this.default_html;
 
 
   constructor(private imgDataSvc: ImageDataService) { }
@@ -19,14 +19,21 @@ export class ResultsComponent implements OnInit {
     this.imgDataSvc.image_data.subscribe(res => this.image_dataChanged(res));
   }
 
-  image_dataChanged(res) {
+  image_dataChanged(image_data) {
+    this.result_html = this.default_html;
     // Update results on image_data change
-    this.image_data = res;
-
-    for (var image of this.image_data) {
+    var urls = [];
+    for (var image of image_data) {
       if (image['active'] == true) {
-        console.log("ACTIVE", image['url'])
+        urls.push(image['url'])
       }
+    }
+    if (urls.length > 0) {
+      this.result_html = "<ul>"
+      for (var url of urls) {
+        this.result_html += "<li>" + url + "</li>"
+      }
+      this.result_html += "</ul>"
     }
 
   }
