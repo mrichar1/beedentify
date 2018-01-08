@@ -9,7 +9,7 @@ import { ImageDataService } from "../image-data.service";
   styleUrls: ['./image-grid.component.css']
 })
 export class ImageGridComponent implements OnInit {
-  image_data: object;
+  image_data: Array<object>;
   filter_types = {"insects": true, "locations": true};
   ft_keys = Object.keys(this.filter_types);
 
