@@ -11,7 +11,7 @@
   </div>
   <div class="row">
     <ng-container *ngFor="let image of image_data; let id = index">
-      <app-image-select *ngIf="filter_types[image.type]" class="col-sm-3 gridbox" [image_data]="image" [id]="id" [ngClass]="{'img-zoom': zoom_enabled}"></app-image-select>
+      <app-image-select *ngIf="filter_types[image.type]" class="col-sm-3 gridbox" [id]="id" [ngClass]="{'img-zoom': zoom_enabled}"></app-image-select>
     </ng-container>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ImageDataService } from "../image-data.service";
 
 @Component({
   selector: 'app-image-select',
@@ -6,17 +7,24 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./image-select.component.css']
 })
 export class ImageSelectComponent implements OnInit {
-  @Output() activeChange = new EventEmitter<boolean>();
-  @Input() image_data: object;
   @Input() id: string;
+  image_data: Array<object>;
+  image: object;
 
-  constructor() {}
+  constructor(private imgDataSvc: ImageDataService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.imgDataSvc.image_data.subscribe(res => this.imageEvent(res))
+  }
+
+  imageEvent (res) {
+    this.image_data = res;
+    this.image = this.image_data[this.id];
+  }
 
   clicked() {
-    // Toggle active state on click, and fire event
-    this.image_data['active'] = !this.image_data['active']
-    this.activeChange.emit(this.image_data['active']);
+    // Toggle active state on click, and push data to service
+    this.image['active'] = !this.image['active'];
+    this.imgDataSvc.changeData(this.image_data)
   }
 }
