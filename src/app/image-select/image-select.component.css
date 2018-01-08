@@ -24,22 +24,8 @@ input[type="checkbox"]:checked + label img {
 }
 
 img {
-  transition: all .5s ease;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
   vertical-align: middle;
   position: relative;
-}
-
-img.img-zoom:hover {
-  transform:scale(1.5);
-  -ms-transform:scale(1.5); /* IE 9 */
-  -moz-transform:scale(1.5); /* Firefox */
-  -webkit-transform:scale(1.5); /* Safari and Chrome */
-  -o-transform:scale(1.5); /* Opera */
-  z-index: 10;
 }
 
 /* Remove bottom margin added by bootstrap to all labels */
