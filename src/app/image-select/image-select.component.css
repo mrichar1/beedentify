@@ -3,34 +3,37 @@ input[type="checkbox"] {
   display: none;
 }
 
-img {
-  cursor: pointer;
-  border: 5px solid transparent;
-}
-
-input[type="checkbox"]:checked + label:before {
-  background-color: blue;
-  color: white;
-  /* tick-mark */
-  content: '\2713';
-  position: absolute;
-  margin: 5px;
-  font-size: 30px;
-  /* Put checkmark on top of child img */
-  z-index: 1;
-}
-
-input[type="checkbox"]:checked + label img {
-  border: 5px solid #00f;
-  display: inline-block;
-}
-
-img {
-  vertical-align: middle;
-  position: relative;
-}
-
 /* Remove bottom margin added by bootstrap to all labels */
 label {
   margin: 0px;
+}
+
+
+img {
+  cursor: pointer;
+  border: 5px solid transparent;
+  vertical-align: middle;
+  position: relative;
+  display: block;
+}
+
+/* When active, solid blue border */
+.active img {
+  border: 5px solid blue;
+}
+
+.checkmark {
+  display: none;
+  position: absolute;
+  background-color: blue;
+  color: white;
+  position: absolute;
+  top: 0px;
+  margin: 5px;
+  font-size: 30px;
+}
+
+/* Enable checkmark display when active */
+.active .checkmark {
+  display: block;
 }
