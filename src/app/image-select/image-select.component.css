@@ -16,6 +16,8 @@ input[type="checkbox"]:checked + label:before {
   position: absolute;
   margin: 5px;
   font-size: 30px;
+  /* Put checkmark on top of child img */
+  z-index: 1;
 }
 
 input[type="checkbox"]:checked + label img {
