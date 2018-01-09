@@ -10,6 +10,7 @@ import { ImageSelectComponent } from './image-select/image-select.component';
 import { ImageDataService }  from './image-data.service';
 import { BootstrapSwitchModule } from 'angular2-bootstrap-switch';
 import { ResultsComponent } from './results/results.component';
+import { OrderByObjectPropertyPipe } from './orderbyobjectproperty.pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ResultsComponent } from './results/results.component';
     AppComponent,
     ImageGridComponent,
     ImageSelectComponent,
-    ResultsComponent
+    ResultsComponent,
+    OrderByObjectPropertyPipe
   ],
   imports: [
     BrowserModule,
