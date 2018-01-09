@@ -10,3 +10,10 @@
   background-color: lightblue;
   display: inline;
 }
+
+/* Don't display zoom toggle for devices without hover capability */
+@media (hover: none) {
+  .zoom-toggle {
+    display: none;
+  }
+}

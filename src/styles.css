@@ -10,11 +10,13 @@
 }
 
 /* Scale and overlap everything else on hover */
-.img-zoom div:hover {
-  transform:scale(1.5);
-  -ms-transform:scale(1.5); /* IE 9 */
-  -moz-transform:scale(1.5); /* Firefox */
-  -webkit-transform:scale(1.5); /* Safari and Chrome */
-  -o-transform:scale(1.5); /* Opera */
-  z-index: 9999;
+@media (hover: hover) {
+  .img-zoom div:hover {
+    transform:scale(1.5);
+    -ms-transform:scale(1.5); /* IE 9 */
+    -moz-transform:scale(1.5); /* Firefox */
+    -webkit-transform:scale(1.5); /* Safari and Chrome */
+    -o-transform:scale(1.5); /* Opera */
+    z-index: 9999;
+  }
 }
