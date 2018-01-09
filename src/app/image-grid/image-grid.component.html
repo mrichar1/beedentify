@@ -3,7 +3,7 @@
     <span class="toggle-label">Zoom
       <switch (statusChange)="zoom_enabled = !zoom_enabled"></switch>
     </span>
-    <span>Filter images: </span>
+    <span>Filter images:</span>
     <ng-container *ngFor="let type of ft_keys">
       <span class="toggle-label">{{type}}
         <switch [status]="true" (statusChange)="filter_types[type] = !filter_types[type]"></switch>

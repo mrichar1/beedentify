@@ -12,6 +12,7 @@ export class ImageGridComponent implements OnInit {
   image_data: Array<object>;
   filter_types = {"insects": true, "locations": true};
   ft_keys = Object.keys(this.filter_types);
+  zoom_enabled: boolean = false;
 
   constructor(private imgDataSvc: ImageDataService) {}
 
