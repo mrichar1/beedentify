@@ -1,14 +1,16 @@
 <div class="image-grid container-fluid">
+  <div class="row">
   <div class="toggle-group">
-    <span class="toggle-label zoom-toggle">Zoom
-      <switch (statusChange)="zoom_enabled = !zoom_enabled"></switch>
-    </span>
-    <span>Filter images:</span>
-    <ng-container *ngFor="let type of ft_keys">
-      <span class="toggle-label">{{type}}
-        <switch [status]="true" (statusChange)="filter_types[type] = !filter_types[type]"></switch>
+    <div class="col-xs-12">
+      <span class="toggle-label zoom-toggle">Zoom
+        <switch (statusChange)="zoom_enabled = !zoom_enabled"></switch>
       </span>
-    </ng-container>
+      <ng-container *ngFor="let type of ft_keys">
+        <span class="toggle-label">{{type}}
+          <switch [status]="true" (statusChange)="filter_types[type] = !filter_types[type]"></switch>
+        </span>
+      </ng-container>
+    </div>
   </div>
   <div class="row">
     <ng-container *ngFor="let image of image_data; let id = index">
