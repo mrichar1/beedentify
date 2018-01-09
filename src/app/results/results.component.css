@@ -1,11 +1,3 @@
 .card-title {
   background-color: lightblue;
 }
-
-.card {
-  top: 10%;
-  bottom: 25%;
-  position: absolute;
-  height: 25%;
-  width: 98%;
-}

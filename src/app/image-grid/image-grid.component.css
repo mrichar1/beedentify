@@ -1,11 +1,5 @@
 [type=checkbox] { display:none;}
 
-.image-grid {
-  position: absolute;
-  top: 30%;
-  bottom: 100%;
-}
-
 /* Give grid boxes a border and remove content padding */
 .gridbox {
   border: 1px solid lightgray;
