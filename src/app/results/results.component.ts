@@ -24,20 +24,27 @@ export class ResultsComponent implements OnInit {
   image_dataChanged(image_data) {
     this.result_html = this.default_html;
     // Update results on image_data change
-    var urls = [];
-    for (var image of image_data) {
+    let scores = {};
+    let score_total = 0
+    for (let image of image_data) {
       if (image['active'] == true) {
-        urls.push(image['url'])
+        for (let [name, num] of Object.entries(image['score'])) {
+          scores[name] = (scores[name] || 0) + 1;
+          score_total++
+        }
       }
     }
-    if (urls.length > 0) {
-      this.result_html = "<ul>"
-      for (var url of urls) {
-        this.result_html += "<li>" + url + "</li>"
+    let result = []
+    if (score_total > 0) {
+      result.push('<ul>')
+      for (let [name, score] of Object.entries(scores)) {
+        if (score > 0) {
+          console.log(score)
+          let pct = (Number(score)/score_total)*100;
+          result.push("<li><strong>" + name + "</strong> scores: " + pct.toFixed(2) +"%</li>");
+        }
       }
-      this.result_html += "</ul>"
+      this.result_html = result.join("\n")
     }
-
   }
-
 }
