@@ -7,9 +7,11 @@ import { ImageDataService } from "../image-data.service";
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  default_html = "<p>Please select one or more images below which match what you are currently seeing.\n\
-  You can toggle zooming of images when you hover over them, and turn various categories of image on and off, depending on what you can see.\n\
-  When you select at least one image, this panel will update with your results.</p>"
+  default_html = "<p>Please select one or more images below which match what you are currently seeing.\
+  You can toggle zooming of images when you hover over them, and filter various categories of image on and off.\
+  When you select at least one image, this panel will update with your results.\
+  For best results, select multiple images.</p>"
+
   result_html: string = this.default_html;
 
 

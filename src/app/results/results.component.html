@@ -1,9 +1,7 @@
 <div class="container-fluid">
-  <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-    <ngb-panel title="Results">
-      <ng-template ngbPanelContent>
-        <div [innerHTML]="result_html"></div>
-      </ng-template>
-    </ngb-panel>
-  </ngb-accordion>
+  <div class="card">
+    <div class="card-block">
+    <h3 class="card-title">Results</h3>
+    <div class="card-text" [innerHTML]="result_html"></div>
+  </div>
 </div>
