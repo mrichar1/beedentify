@@ -17,6 +17,7 @@
 {"active":false, "url": "assets/img/swarm-close.jpg", "type": "insects"},
 {"active":false, "url": "assets/img/vents.jpg", "type": "locations"},
 {"active":false, "url": "assets/img/walls.jpg", "type": "locations"},
+{"active":false, "url": "assets/img/dry-stone-wall.jpg", "type": "locations"},
 {"active":false, "url": "assets/img/wasp2.jpg", "type": "insects"},
 {"active":false, "url": "assets/img/wasp.jpg", "type": "insects"},
 {"active":false, "url": "assets/img/wasp-nest-small.jpg", "type": "locations"}
