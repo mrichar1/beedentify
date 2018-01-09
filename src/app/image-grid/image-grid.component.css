@@ -11,9 +11,13 @@
   display: inline;
 }
 
+.zoom-toggle {
+  display: none;
+}
+
 /* Don't display zoom toggle for devices without hover capability */
-@media (hover: none) {
+@media (hover: hover) {
   .zoom-toggle {
-    display: none;
+    display: inline;
   }
 }
