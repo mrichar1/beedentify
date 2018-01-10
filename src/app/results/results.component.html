@@ -1,19 +1,33 @@
 <div class="container-fluid">
   <div class="card">
     <div class="card-block">
-    <h3 class="card-title">Results</h3>
-    <div class="card-text">
-      <ng-container *ngIf="results.length > 0; else documentation">
-        <ng-container *ngFor="let item of results | orderByObjectProperty:'score':false">
-          <div>{{item.name}}:{{item.score}}%</div>
-        </ng-container>
-      </ng-container>
-      <ng-template #documentation>
-        <p>Please select one or more images below which match what you are currently seeing.
-  You can filter various categories of image on and off to aid selection.
-  When you select at least one image, this panel will update with your results.
-  For best results, select multiple images.</p>
-      </ng-template>
+      <ng-container *ngIf="results.length > 0; then result_card; else instructions_card"></ng-container>
     </div>
   </div>
 </div>
+
+<ng-template #result_card>
+  <h3 class="card-title">Results</h3>
+  <div class="card-text">
+    <p>Image matches (out of <strong>{{score_total}}</strong> selections):</p>
+    <ul>
+    <ng-container *ngFor="let item of results | orderByObjectProperty:'score':false" [ngSwitch]="(item.score >3 && item.score/score_total >0.33)|| (item.score >=2 && item.score/score_total > 0.5)">
+      <li><strong>{{item?.score}}</strong> for
+        <a *ngSwitchCase="true" [href]="item.link">{{item.name}}</a>
+        <span *ngSwitchCase="false">{{item.name}}</span>
+      </li>
+
+    </ng-container>
+    </ul>
+  </div>
+</ng-template>
+
+<ng-template #instructions_card>
+  <h3 class="card-title">Instructions</h3>
+  <div class="card-text">
+    <p>Please select one or more images below which match what you are currently seeing.
+       You can filter various categories of image on and off to aid selection.</p>
+    <p>You can click on any result <em>over</em> 50% for more information.</p>
+    <p>You should select at least <strong>2</strong> images, and preferably 3 for better identification.</p>
+  </div>
+</ng-template>

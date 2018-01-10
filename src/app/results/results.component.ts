@@ -8,7 +8,7 @@ import { ImageDataService } from "../image-data.service";
 })
 export class ResultsComponent implements OnInit {
   results: Array<any> = [];
-
+  score_total: number = 0;
 
   constructor(private imgDataSvc: ImageDataService) { }
 
@@ -20,18 +20,18 @@ export class ResultsComponent implements OnInit {
     // Update results on image_data change
     this.results = [];
     let scores = {};
-    let score_total = 0
+    this.score_total = 0
     for (let image of image_data) {
       if (image['active'] == true) {
         for (let [name, num] of Object.entries(image['score'])) {
           scores[name] = (scores[name] || 0) + 1;
-          score_total++
+          this.score_total++
         }
       }
     }
-    if (score_total > 0) {
+    if (this.score_total > 0) {
       for (let [name, score] of Object.entries(scores)) {
-        this.results.push({name: name, score: (Number(score) / score_total * 100).toFixed(2)});
+      this.results.push({name: name, score: Number(score)});
       }
   }
   }
