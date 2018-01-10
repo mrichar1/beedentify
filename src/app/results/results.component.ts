@@ -7,12 +7,7 @@ import { ImageDataService } from "../image-data.service";
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  default_html = "<p>Please select one or more images below which match what you are currently seeing.\
-  You can filter various categories of image on and off to aid selection.\
-  When you select at least one image, this panel will update with your results.\
-  For best results, select multiple images.</p>"
-
-  result_html: string = this.default_html;
+  results: Array<any> = [];
 
 
   constructor(private imgDataSvc: ImageDataService) { }
@@ -22,8 +17,8 @@ export class ResultsComponent implements OnInit {
   }
 
   image_dataChanged(image_data) {
-    this.result_html = this.default_html;
     // Update results on image_data change
+    this.results = [];
     let scores = {};
     let score_total = 0
     for (let image of image_data) {
@@ -34,17 +29,10 @@ export class ResultsComponent implements OnInit {
         }
       }
     }
-    let result = []
     if (score_total > 0) {
-      result.push('<ul>')
       for (let [name, score] of Object.entries(scores)) {
-        if (score > 0) {
-          console.log(score)
-          let pct = (Number(score)/score_total)*100;
-          result.push("<li><strong>" + name + "</strong> scores: " + pct.toFixed(2) +"%</li>");
-        }
+        this.results.push({name: name, score: (Number(score) / score_total * 100).toFixed(2)});
       }
-      this.result_html = result.join("\n")
-    }
+  }
   }
 }

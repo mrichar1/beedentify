@@ -2,6 +2,18 @@
   <div class="card">
     <div class="card-block">
     <h3 class="card-title">Results</h3>
-    <div class="card-text" [innerHTML]="result_html"></div>
+    <div class="card-text">
+      <ng-container *ngIf="results.length > 0; else documentation">
+        <ng-container *ngFor="let item of results | orderByObjectProperty:'score':false">
+          <div>{{item.name}}:{{item.score}}%</div>
+        </ng-container>
+      </ng-container>
+      <ng-template #documentation>
+        <p>Please select one or more images below which match what you are currently seeing.
+  You can filter various categories of image on and off to aid selection.
+  When you select at least one image, this panel will update with your results.
+  For best results, select multiple images.</p>
+      </ng-template>
+    </div>
   </div>
 </div>
