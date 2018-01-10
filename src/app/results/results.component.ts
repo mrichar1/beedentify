@@ -7,8 +7,6 @@ import { ImageDataService } from "../image-data.service";
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  // Make global function available to component
-  private encodeURI = encodeURI;
   private results: Array<any> = [];
   private score_total: number = 0;
 
@@ -36,5 +34,9 @@ export class ResultsComponent implements OnInit {
       this.results.push({name: name, score: Number(score)});
       }
     }
+  }
+
+  docsURI(name) {
+    return encodeURI("assets/docs/" + name + ".html")
   }
 }
