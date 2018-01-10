@@ -13,7 +13,7 @@
     <ul>
     <ng-container *ngFor="let item of results | orderByObjectProperty:'score':false" [ngSwitch]="(item.score >3 && item.score/score_total >0.33)|| (item.score >=2 && item.score/score_total > 0.5)">
       <li><strong>{{item?.score}}</strong> for
-        <a *ngSwitchCase="true" [href]="item.link">{{item.name}}</a>
+        <a *ngSwitchCase="true" [href]="encodeURI(item.name)">{{item.name}}</a>
         <span *ngSwitchCase="false">{{item.name}}</span>
       </li>
 

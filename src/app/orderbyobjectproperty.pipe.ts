@@ -4,6 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'orderByObjectProperty'
 })
 export class OrderByObjectPropertyPipe implements PipeTransform {
+  private direction: number;
 
   transform(records: Array<any>, property: string, ascending=true): any {
     let direction = ascending ? 1: -1;

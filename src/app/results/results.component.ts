@@ -7,8 +7,10 @@ import { ImageDataService } from "../image-data.service";
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  results: Array<any> = [];
-  score_total: number = 0;
+  // Make global function available to component
+  private encodeURI = encodeURI;
+  private results: Array<any> = [];
+  private score_total: number = 0;
 
   constructor(private imgDataSvc: ImageDataService) { }
 
