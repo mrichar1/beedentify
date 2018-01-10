@@ -33,6 +33,6 @@ export class ResultsComponent implements OnInit {
       for (let [name, score] of Object.entries(scores)) {
       this.results.push({name: name, score: Number(score)});
       }
-  }
+    }
   }
 }
