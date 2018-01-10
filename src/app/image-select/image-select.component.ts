@@ -7,9 +7,9 @@ import { ImageDataService } from "../image-data.service";
   styleUrls: ['./image-select.component.css']
 })
 export class ImageSelectComponent implements OnInit {
-  @Input() private id: string;
-  private image_data: Array<object>;
-  private image: object;
+  @Input() id: string;
+  image_data: Array<object>;
+  image: object;
 
   constructor(private imgDataSvc: ImageDataService) {}
 

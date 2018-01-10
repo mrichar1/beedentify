@@ -7,7 +7,7 @@ import { ImageDataService } from "../image-data.service";
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  private results: Array<any> = [];
+  results: Array<any> = [];
   private score_total: number = 0;
 
   constructor(private imgDataSvc: ImageDataService) { }
