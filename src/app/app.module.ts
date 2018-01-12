@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppComponent } from './app.component';
 import { ImageGridComponent } from './image-grid/image-grid.component';
@@ -26,7 +27,8 @@ import { OrderByObjectPropertyPipe } from './orderbyobjectproperty.pipe';
     HttpClientModule,
     NgbModule.forRoot(),
     BootstrapSwitchModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LazyLoadImageModule
   ],
   providers: [ImageDataService],
   bootstrap: [AppComponent]

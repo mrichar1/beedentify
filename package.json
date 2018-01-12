@@ -27,6 +27,7 @@
     "angular2-bootstrap-switch": "^0.2.3",
     "core-js": "^2.4.1",
     "ng-bootstrap": "^1.6.3",
+    "ng-lazyload-image": "^3.4.2",
     "rxjs": "^5.5.6",
     "webpack": "^3.10.0",
     "zone.js": "^0.8.4"

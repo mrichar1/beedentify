@@ -1,7 +1,7 @@
 <input type="checkbox" id={{id}} [checked]="image['active']" />
 <label for="{{id}}" (click)="clicked()"[ngClass]="{'active': image['active']}">
   <div>
-    <img class="img-fluid" [src]="image['url']" />
+    <img class="img-fluid" [lazyLoad]="image['url']" />
     <div class="checkmark"><p>&#10003;</p></div>
   </div>
 </label>
