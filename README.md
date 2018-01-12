@@ -7,6 +7,17 @@ An angular web-app for the identification of bees, wasps and similar insects by 
 
 ## Development
 
+### Setup
+
+* Make sure a recent version of Node.js is installed (https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
+
+* Install yarn (https://yarnpkg.com/en/docs/install).
+
+* Install `@angular/cli` globally:  `yarn global add @angular/cli`
+
+* Add the yarn binary path to your PATH: `PATH=$(yarn global bin):$PATH`
+
+
 ### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
