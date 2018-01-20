@@ -5,7 +5,7 @@ export class BeedentifyPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
+  getTitleText() {
     return element(by.css('app-root h1')).getText();
   }
 }
