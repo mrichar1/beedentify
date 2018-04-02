@@ -3,10 +3,10 @@
     <div class="card-block">
         <h3 class="card-title">Results</h3>
         <div class="card-text">
-          <p>Image matches (out of <strong>{{score_total}}</strong> selections):</p>
+          <p>Image matches (total of <strong>{{score_total}}</strong> selected):</p>
           <ul>
           <ng-container *ngFor="let item of results | orderByObjectProperty:'score':false">
-             <ng-container [ngTemplateOutlet]="(item.score >3 && item.score/score_total >0.33)|| (item.score >=2 && item.score/score_total > 0.5) ? name_link : name_text" [ngTemplateOutletContext]="{item:item}"></ng-container>
+             <ng-container [ngTemplateOutlet]="(item.score >4 && item.score/score_total >0.25) || (item.score >3 && item.score/score_total >0.33) || (item.score >=2 && item.score/score_total > 0.5) ? name_link : name_text" [ngTemplateOutletContext]="{item:item}"></ng-container>
           </ng-container>
           </ul>
         </div>
@@ -15,9 +15,9 @@
 </div>
 
 <ng-template #name_text let-item="item">
-    <li><strong>{{item.score}}</strong> for <a [href]="docsURI(item.name)" target="new">{{item.name}}</a></li>
+    <li><a [href]="docsURI(item.name)" target="new">{{item.name}}</a>: <strong>{{item.score}}</strong></li>
 </ng-template>
 
 <ng-template #name_link let-item="item">
-  <li class="result-match"><strong>{{item.score}}</strong> for <a [href]="docsURI(item.name)" target="new">{{item.name}}</a></li>
+  <li class="result-match"><a [href]="docsURI(item.name)" target="new">{{item.name}}</a>: <strong>{{item.score}}</strong></li>
 </ng-template>
