@@ -19,7 +19,7 @@ export class AppComponent {
     this.imgDataSvc.image_data.subscribe(res => this.image_data = res)
     this.http.get('assets/images.json')
       .subscribe(data => this.imgDataSvc.changeData(data));
-    this.modal.open(WelcomeComponent);
+    this.modal.open(WelcomeComponent, {size: 'lg', centered: true});
   }
 }
 
