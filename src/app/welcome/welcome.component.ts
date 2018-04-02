@@ -25,8 +25,9 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
       it will be marked with a &#10003; indicating it is the most likely candidate.
       </ol>
       <p>You can turn on zooming for more detail, and filter various categories of image on and off.</p>
-      <p><em>Note: The images have been chosen to closely match these insects and their nesting sites, and if the images
-      are selected accurately, identification is usually successful. However, if you are unsure, please consult with an expert.</em></p>
+      <p><em>Note: The images have been chosen to closely match these insects and their nesting sites,
+      and identifications are usually accurate. However, we would always recommend consulting with an expert,
+      especially before undertaking any work.</em></p>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" (click)="activeModal.close('Close click')">Close</button>
