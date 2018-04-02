@@ -7,6 +7,7 @@
 {"active":false, "url": "assets/img/honey-bee2.jpg", "type": "insects", "score": {"Honey Bee": 1}},
 {"active":false, "url": "assets/img/honey-bee-brace-comb.jpg", "type": "locations", "score": {"Honey Bee": 1}},
 {"active":false, "url": "assets/img/honey-bee.jpg", "type": "insects", "score": {"Honey Bee": 1}},
+{"active":false, "url": "assets/img/honey-bee-cutout.jpg", "type": "locations", "score": {"Honey Bee": 1}},
 {"active":false, "url": "assets/img/hornet.jpg", "type": "insects", "score": {"Hornet": 1}},
 {"active":false, "url": "assets/img/mason-bee.jpg", "type": "insects", "score": {"Solitary Bee": 1}},
 {"active":false, "url": "assets/img/mining-bee.jpg", "type": "insects", "score": {"Solitary Bee": 1}},
@@ -19,7 +20,6 @@
 {"active":false, "url": "assets/img/dry-stone-wall.jpg", "type": "locations", "score": {"Solitary Bee": 1, "Wasp": 1}},
 {"active":false, "url": "assets/img/wasp2.jpg", "type": "insects", "score": {"Wasp": 1}},
 {"active":false, "url": "assets/img/wasp.jpg", "type": "insects", "score": {"Wasp": 1}},
-{"active":false, "url": "assets/img/hornet-nest.jpg", "type": "insects", "score": {"Hornet": 1}},
 {"active":false, "url": "assets/img/wasp-nest-small.jpg", "type": "locations", "score": {"Hornet": 1, "Wasp": 1}},
 {"active":false, "url": "assets/img/wasp-nest.jpg", "type": "locations", "score": {"Hornet": 1, "Wasp": 1}}
 ]
