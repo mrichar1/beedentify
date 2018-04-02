@@ -15,9 +15,9 @@
 </div>
 
 <ng-template #name_text let-item="item">
-    <li><strong>{{item.score}}</strong> for {{item.name}}</li>
+    <li><strong>{{item.score}}</strong> for <a [href]="docsURI(item.name)" target="new">{{item.name}}</a></li>
 </ng-template>
 
 <ng-template #name_link let-item="item">
-  <li style="font-size:2em"><strong>{{item.score}}</strong> for <a [href]="docsURI(item.name)" target="new">{{item.name}}</a></li>
+  <li class="result-match"><strong>{{item.score}}</strong> for <a [href]="docsURI(item.name)" target="new">{{item.name}}</a></li>
 </ng-template>
