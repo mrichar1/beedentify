@@ -2,10 +2,6 @@
   background-color: lightblue;
 }
 
-.result-match {
-  font-size: 1.5em;
-}
-
 .clickable {
   color: blue;
   cursor: pointer;

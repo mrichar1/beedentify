@@ -1,23 +1,14 @@
 <div class="container-fluid">
   <div class="card">
     <div class="card-block">
-        <h3 class="card-title">Results (&#10003; = most likely match)</h3>
+        <h4 class="card-title">Possible Matches</h4>
         <div class="card-text">
-          <p>Image matches (total of <strong>{{score_total}}</strong> selected) - click on the name for more information:</p>
           <ul>
-          <ng-container *ngFor="let item of results | orderByObjectProperty:'score':false">
-             <ng-container [ngTemplateOutlet]="(item.score >4 && item.score/score_total >0.25) || (item.score >3 && item.score/score_total >0.33) || (item.score >=2 && item.score/score_total > 0.5) ? name_link : name_text" [ngTemplateOutletContext]="{item:item}"></ng-container>
-          </ng-container>
+            <ng-container *ngFor="let item of results | orderByObjectProperty:'score':false">
+              <li><span class="clickable" (click)="insectModal(item.name)">{{item.name}} </span><span>({{item.score}} selected)</span></li>
+            </ng-container>
           </ul>
         </div>
     </div>
   </div>
 </div>
-
-<ng-template #name_text let-item="item">
-  <li><span class="clickable" (click)="insectModal(item.name)">{{item.name}} </span><span>({{item.score}} selected)</span></li>
-</ng-template>
-
-<ng-template #name_link let-item="item">
-  <li class="result-match"><span class="clickable" (click)="insectModal(item.name)">&#10003; <strong>{{item.name}}</strong> </span><span>({{item.score}} selected)</span></li>
-</ng-template>

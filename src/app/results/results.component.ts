@@ -22,7 +22,7 @@ export class ResultsComponent implements OnInit {
     // Update results on image_data change
     this.results = [];
     let scores = {};
-    this.score_total = 0
+    this.score_total = 0;
     for (let image of image_data) {
       if (image['active'] == true) {
         for (let [name, num] of Object.entries(image['score'])) {
@@ -33,7 +33,11 @@ export class ResultsComponent implements OnInit {
     }
     if (this.score_total > 0) {
       for (let [name, score] of Object.entries(scores)) {
-      this.results.push({name: name, score: Number(score)});
+        let num_score = Number(score);
+        this.results.push({name: name, score: num_score});
+        if ((num_score >4 && num_score / this.score_total >0.25) || (num_score >3 && num_score/this.score_total >0.33) || (num_score >=2 && num_score/this.score_total > 0.5)) {
+          this.insectModal(name);
+        }
       }
     }
   }
