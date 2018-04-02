@@ -5,13 +5,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 
-import { AppComponent, WelcomeComponent } from './app.component';
+import { AppComponent } from './app.component';
 import { ImageGridComponent } from './image-grid/image-grid.component';
 import { ImageSelectComponent } from './image-select/image-select.component';
 import { ImageDataService }  from './image-data.service';
 import { BootstrapSwitchModule } from 'angular2-bootstrap-switch';
 import { ResultsComponent } from './results/results.component';
 import { OrderByObjectPropertyPipe } from './orderbyobjectproperty.pipe';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
