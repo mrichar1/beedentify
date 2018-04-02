@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="card">
     <div class="card-block">
-        <h3 class="card-title">Results</h3>
+        <h3 class="card-title">Results (&#10003; = most likely match)</h3>
         <div class="card-text">
           <p>Image matches (total of <strong>{{score_total}}</strong> selected):</p>
           <ul>
@@ -19,5 +19,5 @@
 </ng-template>
 
 <ng-template #name_link let-item="item">
-  <li class="result-match"><a [href]="docsURI(item.name)" target="new">{{item.name}}</a>: <strong>{{item.score}}</strong></li>
+  <li class="result-match"><span style="color: green">&#10003;</span><a [href]="docsURI(item.name)" target="new">{{item.name}}</a>: <strong>{{item.score}}</strong></li>
 </ng-template>

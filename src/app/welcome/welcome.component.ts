@@ -13,6 +13,7 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
     <div class="modal-body">
       <p>Beedentify is designed to help you work out what type of bees or wasps you have in your home or garden,
       and provide you with information on what can be done about them if they are causing you a problem.</p>
+
       <h5>Instructions</h5>
       <ol>
       <li>
@@ -21,9 +22,11 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
       </li>
       <li>As you select images, the <strong>Results</strong> section will update.</li>
       <li>Once <em>more than</em> <strong>50%</strong> of the images you have selected match for a particular insect,
-      its Results entry will become much larger, indicating it is the most likely candidate.
+      it will be marked with a &#10003; indicating it is the most likely candidate.
       </ol>
-      <p><em>You can turn on zooming for more detail, and filter various categories of image on and off.</em></p>
+      <p>You can turn on zooming for more detail, and filter various categories of image on and off.</p>
+      <p><em>Note: The images have been chosen to closely match these insects and their nesting sites, and if the images
+      are selected accurately, identification is usually successful. However, if you are unsure, please consult with an expert.</em></p>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" (click)="activeModal.close('Close click')">Close</button>
