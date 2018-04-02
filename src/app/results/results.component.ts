@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageDataService } from "../image-data.service";
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { InsectsComponent } from '../insects/insects.component';
 
 @Component({
   selector: 'app-results',
@@ -10,7 +12,7 @@ export class ResultsComponent implements OnInit {
   results: Array<any> = [];
   score_total: number = 0;
 
-  constructor(private imgDataSvc: ImageDataService) { }
+  constructor(private imgDataSvc: ImageDataService, private modal: NgbModal) { }
 
   ngOnInit() {
     this.imgDataSvc.image_data.subscribe(res => this.image_dataChanged(res));
@@ -38,5 +40,11 @@ export class ResultsComponent implements OnInit {
 
   docsURI(name) {
     return encodeURI("assets/docs/" + name + ".html")
+  }
+
+  insectModal(type) {
+    const insectModal = this.modal.open(InsectsComponent, {size: 'lg', centered: true});
+    insectModal.componentInstance.type = type;
+
   }
 }

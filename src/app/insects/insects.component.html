@@ -1,0 +1,133 @@
+<div [ngSwitch]="type">
+  <div *ngSwitchCase="'Honey Bee'">
+    <div class="modal-header">
+      <h3 class="modal-title">Honey Bees</h3>
+      <button type="button" class="close" (click)="activeModal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <p>Honey bees are small, slightly hairy, and muted in colour - usually shades of brown and black, rather than the bright yellow of wasps or hornets.
+      They are only usually aggressive when defending their hive, and are not aggressive like wasps when foraging away from home.
+      Honey bees can often be seen carrying pollen on their hind legs as 'pollen baskets'.</p>
+
+      <h3>Swarms</h3>
+
+      <p>The commonest reason to need assistance with honey bees is when they swarm.</p>
+
+      <p>Swarming usually occurs in late spring and summer when the queen leaves the hive or nest with all
+      the the adult flying bees leaving behind enough young bees, larvae, eggs and prepared queen cells to keep the colony going.
+      This is the natural way in which honey bees increase their numbers.</p>
+
+      <p>A swarm will travel to a new location and may land on trees, bushes, walls, posts or anything convenient to wait while the scouts
+      find a new permanent home. A swarm can be an unwelcome guest when this happens.</p>
+
+      <h3>Dealing with Swarms</h3>
+      <p>Swarms are large, noisy balls of bees, and on first sight can seem quite frightening! However, swarms are generally peaceful,
+      and provided they are not disturbed, will generally ignore the presence of people until they settle in a new permanent home, where they will resume guard duties.</p>
+
+      <p>If you encounter a swarm, you should take the following steps:</p>
+
+      <ul>
+        <li>Keep any people, children and pets or other animals away from the swarm.</li>
+        <li>If possible, alert passers-by to the presence of the swarm so that they don't accidentally disturb it.</li>
+        <li>Don't do anything to provoke or disturb the swarm to try to get it to move on. The swarm will only move when it is ready to do so, and interference might result in stings!</li>
+        <li>If you need to move around near the swarm, do so in a calm, controlled manner, avoiding making any sudden movements or loud noises.</li>
+        <li>Get in touch with a beekeeper to remove the swarm.</li>
+      </ul>
+
+      <p>If you are resident in Edinburgh and the Lothians, you can report a swarm via the <a href="https://www.edinburghbeekeepers.org.uk/swarms">Edinburgh and Midlothian Beekeepers' Association</a></p>
+
+      <p>Otherwise, you can contact a beekeeper via your local beekeeping association:</p>
+      <ul>
+        <li><a href="https://www.bbka.org.uk/find-beekeeping-near-you">England and Wales</a></li>
+        <li><a href="https://www.scottishbeekeepers.org.uk/about/affiliated-beekeeping-associations">Scotland</a></li>
+        <li><a href="https://www.ubka.org/about/local-associations/">Northern Ireland</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Bumblebee'">
+    <div class="modal-header">
+      <h3 class="modal-title">Bumblebees</h3>
+      <button type="button" class="close" (click)="activeModal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+
+      <p>Bumblebees are generally large, round and visibly furry, and come in a variety of species and colours.
+      They are fairly common in gardens throughout the UK during the spring and summer, and often build nests in compost heaps,
+      under decking or gardens shed and other warm dry places like old mouse nests.</p>
+
+      <p>They are generally peaceful, and while they can sting rarely do so unless their
+      nest is disturbed. However the Tree Bumble Bee - a relatively new species to the UK, can be more defensive.
+      It's preferred nesting site is in bird boxes or roof eaves.</p>
+
+      <p>umblebees are one of our wild insects that occur naturally throughout the country and are hugely important pollinators.
+      Unfortunately, due to loss of habitat and the prevalence of pesticide use, their numbers are decreasing and some species
+      are already under severe threat of extinction.</p>
+
+      <p>Bumble bees only nest in a location for a single season, so the nest will be
+      abandoned by winter - so in most cases they can just be left where they are for the summer.  Otherwise, if you need to move
+      them the only option is to use a pest control company - beekeepers aren't able to help with Bumblebees.</p>
+
+      <p>More information on Bumblebees is available from <a href="https://bumblebeeconservation.org">The Bumblebee Conservation Trust</a></p>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Solitary Bee'">
+    <div class="modal-header">
+      <h3 class="modal-title">Solitary Bees</h3>
+      <button type="button" class="close" (click)="activeModal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+
+      <p>There are many species of these insects which occur frequently around our homes and gardens in spring and summer.
+        They are all beneficial to the environment and pose no threat to humans.</p>
+
+      <p>Most species lay eggs either in holes in the ground, earth banks, or stonework/masonry. They look very similar to honey bees,
+        though they lack the pollen baskets on their hind legs.  They are also generally only present in spring and early summer,
+        and die off after laying their eggs - the larvae of which will emerge in the following spring.</p>
+
+      <p>More information on solitary bees is available from the <a href="http://www.wildlifetrusts.org/reserves-wildlife/guide-solitary-bees-britain">Wildlife Trust</a></p>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Hornet'">
+    <div class="modal-header">
+      <h3 class="modal-title">Hornets</h3>
+      <button type="button" class="close" (click)="activeModal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <p>Hornets are similar to wasps - they build nests out of paper and plant materials.
+      However they are less common than wasps, and generally less aggressive - even though they are
+      often much larger!</p>
+
+      <p>Like wasps, if you have a problem with hornets, then the best option is to contact
+        a pest control company to remove them. Hornets, though less likely to sting, do deliver
+        a much more painful sting than wasps, so DIY methods or removal are best avoided!</p>
+
+      <p>There is also currently a threat from the Asian Hornet, which was accidentally introduced
+        into France, and is at risk of entering the UK. If this species is seen, it should be reported
+        <a href="http://www.nonnativespecies.org/factsheet/factsheet.cfm?speciesId=3826">Asian Hornet Reporting</a></p>
+    </div>
+  </div>
+
+
+  <div *ngSwitchCase="'Wasp'">
+    <div class="modal-header">
+      <h3 class="modal-title">Wasps</h3>
+      <button type="button" class="close" (click)="activeModal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+
+      <p>Wasps are smooth-shelled and shiny, with brighter, distinct yellow and black stripes, and lack the hairs that honey bees and bumble bees have.
+      They are more inquisitive and aggressive than bees, and are attracted to sweet smelling or fermenting things, such as jam, rotten fruit, alcohol.
+
+      <p>Wasps can sting repeatedly, and are much more likely to do so than honey or bumble bees - especially later on in the season.</p>
+
+      <p>If you have an issue with wasps, then you should contact a pest control company who will be able to remove them.</p>
+    </div>
+  </div>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.close('Close click')">Close</button>
+</div>

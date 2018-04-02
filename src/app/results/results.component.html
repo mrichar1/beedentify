@@ -15,9 +15,9 @@
 </div>
 
 <ng-template #name_text let-item="item">
-    <li><a [href]="docsURI(item.name)" target="new">{{item.name}}</a>: <strong>{{item.score}}</strong></li>
+  <li><span class="clickable" (click)="insectModal(item.name)">{{item.name}} </span><span>{{item.score}}</span></li>
 </ng-template>
 
 <ng-template #name_link let-item="item">
-  <li class="result-match"><span style="color: green">&#10003;</span><a [href]="docsURI(item.name)" target="new">{{item.name}}</a>: <strong>{{item.score}}</strong></li>
+  <li class="result-match"><span class="clickable" (click)="insectModal(item.name)">&#10003; <strong>{{item.name}}</strong> </span><span>{{item.score}}</span></li>
 </ng-template>

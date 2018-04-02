@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppComponent } from './app.component';
+import { BeedentifyComponent } from './beedentify/beedentify.component';
 import { ImageGridComponent } from './image-grid/image-grid.component';
 import { ImageSelectComponent } from './image-select/image-select.component';
 import { ImageDataService }  from './image-data.service';
@@ -13,16 +14,18 @@ import { BootstrapSwitchModule } from 'angular2-bootstrap-switch';
 import { ResultsComponent } from './results/results.component';
 import { OrderByObjectPropertyPipe } from './orderbyobjectproperty.pipe';
 import { WelcomeComponent } from './welcome/welcome.component';
-
+import { InsectsComponent } from './insects/insects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    BeedentifyComponent,
     ImageGridComponent,
     ImageSelectComponent,
     ResultsComponent,
     OrderByObjectPropertyPipe,
-    WelcomeComponent
+    WelcomeComponent,
+    InsectsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     LazyLoadImageModule
   ],
   providers: [ImageDataService],
-  entryComponents: [WelcomeComponent],
+  entryComponents: [WelcomeComponent, InsectsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
