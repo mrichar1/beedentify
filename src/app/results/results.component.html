@@ -1,37 +1,23 @@
 <div class="container-fluid">
   <div class="card">
     <div class="card-block">
-      <ng-container *ngIf="results.length > 0; then result_card; else instructions_card"></ng-container>
+        <h3 class="card-title">Results</h3>
+        <div class="card-text">
+          <p>Image matches (out of <strong>{{score_total}}</strong> selections):</p>
+          <ul>
+          <ng-container *ngFor="let item of results | orderByObjectProperty:'score':false">
+             <ng-container [ngTemplateOutlet]="(item.score >3 && item.score/score_total >0.33)|| (item.score >=2 && item.score/score_total > 0.5) ? name_link : name_text" [ngTemplateOutletContext]="{item:item}"></ng-container>
+          </ng-container>
+          </ul>
+        </div>
     </div>
   </div>
 </div>
-
-<ng-template #result_card>
-  <h3 class="card-title">Results</h3>
-  <div class="card-text">
-    <p>Image matches (out of <strong>{{score_total}}</strong> selections):</p>
-    <ul>
-    <ng-container *ngFor="let item of results | orderByObjectProperty:'score':false">
-       <ng-container [ngTemplateOutlet]="(item.score >3 && item.score/score_total >0.33)|| (item.score >=2 && item.score/score_total > 0.5) ? name_link : name_text" [ngTemplateOutletContext]="{item:item}"></ng-container>
-    </ng-container>
-    </ul>
-  </div>
-</ng-template>
-
-<ng-template #instructions_card>
-  <h3 class="card-title">Instructions</h3>
-  <div class="card-text">
-    <p>Please select one or more images below which match what you are currently seeing.
-       You can filter various categories of image on and off to aid selection.</p>
-    <p>You can click on any result <em>over</em> 50% for more information.</p>
-    <p>You should select at least <strong>2</strong> images, and preferably 3 for better identification.</p>
-  </div>
-</ng-template>
 
 <ng-template #name_text let-item="item">
     <li><strong>{{item.score}}</strong> for {{item.name}}</li>
 </ng-template>
 
 <ng-template #name_link let-item="item">
-  <li><strong>{{item.score}}</strong> for <a [href]="docsURI(item.name)" target="new">{{item.name}}</a></li>
+  <li style="font-size:2em"><strong>{{item.score}}</strong> for <a [href]="docsURI(item.name)" target="new">{{item.name}}</a></li>
 </ng-template>

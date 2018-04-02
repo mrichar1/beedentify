@@ -5,7 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 
-import { AppComponent } from './app.component';
+import { AppComponent, WelcomeComponent } from './app.component';
 import { ImageGridComponent } from './image-grid/image-grid.component';
 import { ImageSelectComponent } from './image-select/image-select.component';
 import { ImageDataService }  from './image-data.service';
@@ -20,7 +20,8 @@ import { OrderByObjectPropertyPipe } from './orderbyobjectproperty.pipe';
     ImageGridComponent,
     ImageSelectComponent,
     ResultsComponent,
-    OrderByObjectPropertyPipe
+    OrderByObjectPropertyPipe,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +32,7 @@ import { OrderByObjectPropertyPipe } from './orderbyobjectproperty.pipe';
     LazyLoadImageModule
   ],
   providers: [ImageDataService],
+  entryComponents: [WelcomeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
