@@ -8,7 +8,7 @@ import { ImageDataService } from "../image-data.service";
 })
 export class ResultsComponent implements OnInit {
   results: Array<any> = [];
-  private score_total: number = 0;
+  score_total: number = 0;
 
   constructor(private imgDataSvc: ImageDataService) { }
 
