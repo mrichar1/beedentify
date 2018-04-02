@@ -21,7 +21,7 @@
 {"active":false, "url": "assets/img/mining-bees-lawn.jpg", "type": "insects", "score": {"Solitary Bee": 1}},
 {"active":false, "url": "assets/img/mining-bee2.jpg", "type": "insects", "score": {"Solitary Bee": 1}},
 {"active":false, "url": "assets/img/nestbox-entrance.jpg", "type": "locations", "score": {"Bumblebee": 1, "Wasp": 1}},
-{"active":false, "url": "assets/img/nestbox.jpg", "type": "locations", "score": {"Bumblebee": 1}},
+{"active":false, "url": "assets/img/nestbox.jpg", "type": "locations", "score": {"Bumblebee": 1, "Wasp": 1}},
 {"active":false, "url": "assets/img/swarm-branch.jpg", "type": "insects", "score": {"Honey Bee": 1}},
 {"active":false, "url": "assets/img/honey-bee-small-swarm.jpg", "type": "insects", "score": {"Honey Bee": 1}},
 {"active":false, "url": "assets/img/swarm-flying.jpg", "type": "insects", "score": {"Honey Bee": 1}},
