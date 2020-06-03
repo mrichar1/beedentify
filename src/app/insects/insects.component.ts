@@ -8,7 +8,7 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class InsectsComponent implements OnInit {
   type: string;
-  
+
   constructor(public activeModal: NgbActiveModal) {}
 
   ngOnInit() {

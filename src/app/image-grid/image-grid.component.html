@@ -3,11 +3,11 @@
   <div class="toggle-group">
     <div class="col-xs-12">
       <span class="toggle-label zoom-toggle">Zoom
-        <switch (statusChange)="zoom_enabled = !zoom_enabled"></switch>
+        <bSwitch (changeState)="zoom_enabled = !zoom_enabled"></bSwitch>
       </span>
       <ng-container *ngFor="let type of ft_keys">
         <span class="toggle-label">{{type}}
-          <switch [status]="true" (statusChange)="filter_types[type] = !filter_types[type]"></switch>
+          <bSwitch [status]="true" (changeState)="filter_types[type] = !filter_types[type]"></bSwitch>
         </span>
       </ng-container>
     </div>
