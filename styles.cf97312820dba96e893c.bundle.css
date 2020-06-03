@@ -1,1 +1,0 @@
-.img-zoom div{position:relative;transition:.5s;-webkit-transition:.5s;-moz-transition:.5s;-ms-transition:all .5s ease;-o-transition:.5s}@media (hover:hover){.img-zoom div:hover{transform:scale(1.5);-ms-transform:scale(1.5);-moz-transform:scale(1.5);-webkit-transform:scale(1.5);-o-transform:scale(1.5);z-index:9999}}
