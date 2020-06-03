@@ -1,6 +1,6 @@
 # Beedentify
 
-## Follow this link to use the [Beedentify App](https://mrichar1.github.io/beedentify)
+## Follow this link to use the [Beedentify App](http://beedentify.info)
 
 An angular web-app for the identification of bees, wasps and similar insects by the general public, and provide more information on what to do in each case.
 
